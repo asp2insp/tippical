@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="tippical" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-b0-McM">
+                                <rect key="frame" x="16" y="134" width="568" height="29"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="134" width="139" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="percentChanged:forEvent:" destination="vXZ-lx-hvc" eventType="valueChanged" id="maW-YD-d5R"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="W2B-L9-hme">
+                                <rect key="frame" x="-5" y="0.0" width="617" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="IB0-yv-cKb"/>
+                                    <constraint firstAttribute="height" constant="75" id="sn0-tQ-FB2"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="$225.67">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IB0-yv-cKb"/>
+                                        <exclude reference="sn0-tQ-FB2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <mask key="constraints">
+                                        <include reference="IB0-yv-cKb"/>
+                                        <exclude reference="sn0-tQ-FB2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-5" y="0.0" width="153" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bzm-92-bER">
+                                <rect key="frame" x="-5" y="0.0" width="617" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="25g-fl-gsg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="UFk-35-TNY"/>
+                                    <constraint firstAttribute="width" constant="400" id="l3A-C4-lXj"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="$225.67">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="25g-fl-gsg"/>
+                                        <exclude reference="UFk-35-TNY"/>
+                                        <exclude reference="l3A-C4-lXj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <rect key="frame" x="0.0" y="139" width="400" height="75"/>
+                                    <mask key="constraints">
+                                        <exclude reference="25g-fl-gsg"/>
+                                        <include reference="UFk-35-TNY"/>
+                                        <exclude reference="l3A-C4-lXj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="-5" y="0.0" width="153" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EM5-b0-McM" firstAttribute="top" secondItem="W2B-L9-hme" secondAttribute="bottom" constant="8" symbolic="YES" id="3p8-Oa-mO5"/>
+                            <constraint firstAttribute="trailing" secondItem="EM5-b0-McM" secondAttribute="trailing" id="Kgu-En-e4I"/>
+                            <constraint firstItem="bzm-92-bER" firstAttribute="top" secondItem="EM5-b0-McM" secondAttribute="bottom" constant="8" id="SBv-ft-I2Z"/>
+                            <constraint firstItem="EM5-b0-McM" firstAttribute="width" secondItem="W2B-L9-hme" secondAttribute="width" id="T7L-pj-NDt"/>
+                            <constraint firstItem="EM5-b0-McM" firstAttribute="width" secondItem="bzm-92-bER" secondAttribute="width" id="UPu-uQ-V6W"/>
+                            <constraint firstItem="EM5-b0-McM" firstAttribute="trailing" secondItem="W2B-L9-hme" secondAttribute="trailing" id="UWO-Uz-cUn"/>
+                            <constraint firstItem="EM5-b0-McM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Wan-rS-8IN"/>
+                            <constraint firstItem="W2B-L9-hme" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="d8R-h3-ed0"/>
+                            <constraint firstItem="EM5-b0-McM" firstAttribute="leading" secondItem="W2B-L9-hme" secondAttribute="leading" id="r3k-tf-FYd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bzm-92-bER"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SBv-ft-I2Z"/>
+                                <exclude reference="d8R-h3-ed0"/>
+                                <exclude reference="3p8-Oa-mO5"/>
+                                <exclude reference="Kgu-En-e4I"/>
+                                <exclude reference="T7L-pj-NDt"/>
+                                <exclude reference="UPu-uQ-V6W"/>
+                                <exclude reference="UWO-Uz-cUn"/>
+                                <exclude reference="Wan-rS-8IN"/>
+                                <exclude reference="r3k-tf-FYd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bzm-92-bER"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SBv-ft-I2Z"/>
+                                <include reference="d8R-h3-ed0"/>
+                                <include reference="3p8-Oa-mO5"/>
+                                <include reference="Kgu-En-e4I"/>
+                                <include reference="T7L-pj-NDt"/>
+                                <include reference="UPu-uQ-V6W"/>
+                                <include reference="UWO-Uz-cUn"/>
+                                <include reference="Wan-rS-8IN"/>
+                                <include reference="r3k-tf-FYd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="billField" destination="W2B-L9-hme" id="e1S-vf-a07"/>
+                        <outlet property="percentControl" destination="EM5-b0-McM" id="wD1-m5-vrz"/>
+                        <outlet property="tipField" destination="bzm-92-bER" id="x11-tx-b5T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
