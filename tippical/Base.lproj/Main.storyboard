@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="height" constant="75" id="sn0-tQ-FB2"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="$225.67">
+                                    <fragment content="$0.00">
                                         <attributes>
                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="20" name="HelveticaNeue"/>
@@ -63,23 +63,18 @@
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="-5" y="0.0" width="153" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="billChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="yQj-WD-SQc"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bzm-92-bER">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="$0.00" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bzm-92-bER">
                                 <rect key="frame" x="-5" y="0.0" width="617" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="25g-fl-gsg"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="UFk-35-TNY"/>
                                     <constraint firstAttribute="width" constant="400" id="l3A-C4-lXj"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="$225.67">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                 <variation key="default">
                                     <mask key="constraints">
