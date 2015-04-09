@@ -21,24 +21,40 @@ class ViewController: UIViewController {
         billField.textAlignment = .Center
         billField.font = billField.font.fontWithSize(55.0)
         tipField.textAlignment = .Center
-        
-        billField.selectedTextRange = billField.textRangeFromPosition(billField.beginningOfDocument, toPosition: billField.beginningOfDocument)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        billField.becomeFirstResponder()
+    }
 
     func recalculateTip() {
         var billText = billField.text
-        var billAmount = billText.substringFromIndex(advance(billText.startIndex, 1))._bridgeToObjectiveC().doubleValue
+        var billAmount = billText._bridgeToObjectiveC().doubleValue
         var tipAmount = billAmount * TIP[percentControl.selectedSegmentIndex]
         tipField.text = "$\(tipAmount)"
 
     }
     @IBAction func percentChanged(sender: UISegmentedControl, forEvent event: UIEvent) {
         recalculateTip()
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        var result = true
+        
+        if textField == billField {
+            if countElements(string) > 0 {
+                let disallowedCharacterSet = NSCharacterSet(charactersInString: "0123456789.-").invertedSet
+                let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
+                result = replacementStringIsLegal
+            }
+        }
+        
+        return result
     }
     
     @IBAction func billChanged(sender: UITextField) {
