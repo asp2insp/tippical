@@ -122,7 +122,7 @@
                                     <constraint firstAttribute="width" constant="40" id="MkQ-ry-NMX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -141,7 +141,7 @@
                                     <constraint firstAttribute="width" constant="40" id="DxT-xl-sXI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -160,7 +160,7 @@
                                     <constraint firstAttribute="width" constant="40" id="tOl-mY-PlZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -186,21 +186,21 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="G8a-MW-EUH"/>
                                         <exclude reference="RVU-Wp-IFN"/>
                                         <exclude reference="XvD-yz-GOB"/>
                                         <exclude reference="fxp-XZ-K5N"/>
                                         <exclude reference="si8-Sa-cwa"/>
-                                        <exclude reference="G8a-MW-EUH"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <mask key="constraints">
+                                        <exclude reference="G8a-MW-EUH"/>
                                         <exclude reference="RVU-Wp-IFN"/>
                                         <exclude reference="XvD-yz-GOB"/>
                                         <exclude reference="fxp-XZ-K5N"/>
                                         <include reference="si8-Sa-cwa"/>
-                                        <exclude reference="G8a-MW-EUH"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -250,6 +250,16 @@
                                 <exclude reference="ITf-kV-Bl2"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Mex-k5-Ijd"/>
+                                <exclude reference="uWn-Kn-sj3"/>
+                                <exclude reference="8up-lC-dNu"/>
+                                <exclude reference="luA-A6-nRA"/>
+                                <exclude reference="rE9-vx-Roc"/>
+                                <exclude reference="ydK-yM-8FR"/>
+                                <exclude reference="EhZ-9g-6hN"/>
+                                <exclude reference="d74-Q0-veL"/>
+                                <exclude reference="lsH-C0-7dr"/>
+                                <exclude reference="SBv-ft-I2Z"/>
                                 <exclude reference="BWK-5c-F2T"/>
                                 <exclude reference="c7a-TO-YhQ"/>
                                 <exclude reference="d8R-h3-ed0"/>
@@ -266,16 +276,6 @@
                                 <exclude reference="Wan-rS-8IN"/>
                                 <exclude reference="kKS-Qd-UFe"/>
                                 <exclude reference="r3k-tf-FYd"/>
-                                <exclude reference="8up-lC-dNu"/>
-                                <exclude reference="luA-A6-nRA"/>
-                                <exclude reference="rE9-vx-Roc"/>
-                                <exclude reference="ydK-yM-8FR"/>
-                                <exclude reference="Mex-k5-Ijd"/>
-                                <exclude reference="uWn-Kn-sj3"/>
-                                <exclude reference="SBv-ft-I2Z"/>
-                                <exclude reference="EhZ-9g-6hN"/>
-                                <exclude reference="d74-Q0-veL"/>
-                                <exclude reference="lsH-C0-7dr"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -287,6 +287,16 @@
                                 <include reference="ITf-kV-Bl2"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Mex-k5-Ijd"/>
+                                <include reference="uWn-Kn-sj3"/>
+                                <include reference="8up-lC-dNu"/>
+                                <include reference="luA-A6-nRA"/>
+                                <include reference="rE9-vx-Roc"/>
+                                <include reference="ydK-yM-8FR"/>
+                                <include reference="EhZ-9g-6hN"/>
+                                <include reference="d74-Q0-veL"/>
+                                <include reference="lsH-C0-7dr"/>
+                                <include reference="SBv-ft-I2Z"/>
                                 <include reference="BWK-5c-F2T"/>
                                 <include reference="c7a-TO-YhQ"/>
                                 <include reference="d8R-h3-ed0"/>
@@ -303,16 +313,6 @@
                                 <include reference="Wan-rS-8IN"/>
                                 <include reference="kKS-Qd-UFe"/>
                                 <exclude reference="r3k-tf-FYd"/>
-                                <include reference="8up-lC-dNu"/>
-                                <include reference="luA-A6-nRA"/>
-                                <include reference="rE9-vx-Roc"/>
-                                <include reference="ydK-yM-8FR"/>
-                                <include reference="Mex-k5-Ijd"/>
-                                <include reference="uWn-Kn-sj3"/>
-                                <include reference="SBv-ft-I2Z"/>
-                                <include reference="EhZ-9g-6hN"/>
-                                <include reference="d74-Q0-veL"/>
-                                <include reference="lsH-C0-7dr"/>
                             </mask>
                         </variation>
                     </view>
@@ -320,6 +320,7 @@
                         <outlet property="billField" destination="W2B-L9-hme" id="e1S-vf-a07"/>
                         <outlet property="percentControl" destination="EM5-b0-McM" id="wD1-m5-vrz"/>
                         <outlet property="tipField" destination="bzm-92-bER" id="x11-tx-b5T"/>
+                        <outlet property="totalField" destination="ITf-kV-Bl2" id="5Eu-7z-1qO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

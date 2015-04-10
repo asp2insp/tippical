@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipField: UITextField!
     @IBOutlet weak var percentControl: UISegmentedControl!
+    @IBOutlet weak var totalField: UITextField!
     
     let TIP = [0.15, 0.18, 0.2, 0.25]
 
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         billField.textAlignment = .Center
         billField.font = billField.font.fontWithSize(55.0)
         tipField.textAlignment = .Center
+        totalField.textAlignment = .Center
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +38,9 @@ class ViewController: UIViewController {
         var billText = billField.text
         var billAmount = billText._bridgeToObjectiveC().doubleValue
         var tipAmount = billAmount * TIP[percentControl.selectedSegmentIndex]
+        var total = billAmount + tipAmount
         tipField.text = "$\(tipAmount)"
+        totalField.text = "$\(total)"
 
     }
     @IBAction func percentChanged(sender: UISegmentedControl, forEvent event: UIEvent) {
