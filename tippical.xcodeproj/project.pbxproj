@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE3022781AD782D500F6554C /* gear_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3022771AD782D500F6554C /* gear_icon.png */; };
+		FE30227A1AD7846B00F6554C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3022791AD7846B00F6554C /* SettingsViewController.swift */; };
 		FE506D611AD4ECBD008F2C71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE506D601AD4ECBD008F2C71 /* AppDelegate.swift */; };
 		FE506D631AD4ECBD008F2C71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE506D621AD4ECBD008F2C71 /* ViewController.swift */; };
 		FE506D661AD4ECBD008F2C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE506D641AD4ECBD008F2C71 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE3022771AD782D500F6554C /* gear_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_icon.png; sourceTree = "<group>"; };
+		FE3022791AD7846B00F6554C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FE506D5B1AD4ECBD008F2C71 /* tippical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE506D5F1AD4ECBD008F2C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE506D601AD4ECBD008F2C71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,8 +85,10 @@
 				FE506D621AD4ECBD008F2C71 /* ViewController.swift */,
 				FE506D641AD4ECBD008F2C71 /* Main.storyboard */,
 				FE506D671AD4ECBD008F2C71 /* Images.xcassets */,
+				FE3022771AD782D500F6554C /* gear_icon.png */,
 				FE506D691AD4ECBD008F2C71 /* LaunchScreen.xib */,
 				FE506D5E1AD4ECBD008F2C71 /* Supporting Files */,
+				FE3022791AD7846B00F6554C /* SettingsViewController.swift */,
 			);
 			path = tippical;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 				FE506D661AD4ECBD008F2C71 /* Main.storyboard in Resources */,
 				FE506D6B1AD4ECBD008F2C71 /* LaunchScreen.xib in Resources */,
 				FE506D681AD4ECBD008F2C71 /* Images.xcassets in Resources */,
+				FE3022781AD782D500F6554C /* gear_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 			files = (
 				FE506D631AD4ECBD008F2C71 /* ViewController.swift in Sources */,
 				FE506D611AD4ECBD008F2C71 /* AppDelegate.swift in Sources */,
+				FE30227A1AD7846B00F6554C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

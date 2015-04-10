@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         billField.textAlignment = .Center
-        billField.font = billField.font.fontWithSize(55.0)
         tipField.textAlignment = .Center
         totalField.textAlignment = .Center
     }
