@@ -29,7 +29,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tipChoicesTable.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
-        cell.textLabel?.text = "\(self.TIP[indexPath.row])"
+        cell.textLabel?.text = "\(Int(self.TIP[indexPath.row]*100))%"
         
         return cell
     }
@@ -44,7 +44,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             let fmt = Int(t*100)
             defaultTipControl.insertSegmentWithTitle("\(fmt)%", atIndex: TIP.count, animated:false)
         }
+        let selectedIndex = tipChoicesTable.indexPathForSelectedRow()
         tipChoicesTable.reloadData()
+        tipChoicesTable.selectRowAtIndexPath(selectedIndex, animated: false, scrollPosition: UITableViewScrollPosition.None)
     }
 
     override func viewDidLoad() {
