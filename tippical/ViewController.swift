@@ -13,15 +13,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipField: UITextField!
     @IBOutlet weak var percentControl: UISegmentedControl!
     @IBOutlet weak var totalField: UITextField!
-    
-    let TIP = [0.15, 0.18, 0.2, 0.25]
 
+    var TIP = [0.15]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         billField.textAlignment = .Center
         tipField.textAlignment = .Center
         totalField.textAlignment = .Center
+        
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let savedTips = defaults.arrayForKey(kSegmentSettingsKey) {
+            TIP = savedTips as [Double]
+        } else {
+            TIP = [0.15, 0.18, 0.2, 0.25]
+            defaults.setObject(TIP, forKey: kSegmentSettingsKey)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +40,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         billField.becomeFirstResponder()
+        percentControl.removeAllSegments()
+        for t in TIP {
+            let fmt = Int(t*100)
+            percentControl.insertSegmentWithTitle("\(fmt)%", atIndex: TIP.count, animated:true)
+        }
     }
 
     func recalculateTip() {
