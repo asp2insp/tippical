@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -46,13 +47,14 @@
                                     <action selector="percentChanged:forEvent:" destination="vXZ-lx-hvc" eventType="valueChanged" id="maW-YD-d5R"/>
                                 </connections>
                             </segmentedControl>
-                            <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="0.00" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="W2B-L9-hme">
+                            <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="W2B-L9-hme">
                                 <rect key="frame" x="-5" y="0.0" width="617" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="IB0-yv-cKb"/>
                                     <constraint firstAttribute="height" constant="75" id="sn0-tQ-FB2"/>
                                 </constraints>
-                                <attributedString key="attributedText"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -222,9 +224,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="WbK-TL-N6s" kind="popoverPresentation" popoverAnchorView="xks-Bi-dZg" id="9q1-Rw-Nza">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="WbK-TL-N6s" kind="presentation" modalTransitionStyle="flipHorizontal" id="dWa-ui-Jde"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -275,6 +275,18 @@
                                 <exclude reference="xks-Bi-dZg"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Mex-k5-Ijd"/>
+                                <exclude reference="uWn-Kn-sj3"/>
+                                <exclude reference="8up-lC-dNu"/>
+                                <exclude reference="luA-A6-nRA"/>
+                                <exclude reference="rE9-vx-Roc"/>
+                                <exclude reference="ydK-yM-8FR"/>
+                                <exclude reference="7xj-ST-lkA"/>
+                                <exclude reference="NUe-pL-RMH"/>
+                                <exclude reference="EhZ-9g-6hN"/>
+                                <exclude reference="d74-Q0-veL"/>
+                                <exclude reference="lsH-C0-7dr"/>
+                                <exclude reference="SBv-ft-I2Z"/>
                                 <exclude reference="BWK-5c-F2T"/>
                                 <exclude reference="c7a-TO-YhQ"/>
                                 <exclude reference="d8R-h3-ed0"/>
@@ -291,18 +303,6 @@
                                 <exclude reference="Wan-rS-8IN"/>
                                 <exclude reference="kKS-Qd-UFe"/>
                                 <exclude reference="r3k-tf-FYd"/>
-                                <exclude reference="8up-lC-dNu"/>
-                                <exclude reference="luA-A6-nRA"/>
-                                <exclude reference="rE9-vx-Roc"/>
-                                <exclude reference="ydK-yM-8FR"/>
-                                <exclude reference="Mex-k5-Ijd"/>
-                                <exclude reference="uWn-Kn-sj3"/>
-                                <exclude reference="SBv-ft-I2Z"/>
-                                <exclude reference="EhZ-9g-6hN"/>
-                                <exclude reference="d74-Q0-veL"/>
-                                <exclude reference="lsH-C0-7dr"/>
-                                <exclude reference="7xj-ST-lkA"/>
-                                <exclude reference="NUe-pL-RMH"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -315,6 +315,18 @@
                                 <include reference="xks-Bi-dZg"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Mex-k5-Ijd"/>
+                                <include reference="uWn-Kn-sj3"/>
+                                <include reference="8up-lC-dNu"/>
+                                <include reference="luA-A6-nRA"/>
+                                <include reference="rE9-vx-Roc"/>
+                                <include reference="ydK-yM-8FR"/>
+                                <include reference="7xj-ST-lkA"/>
+                                <include reference="NUe-pL-RMH"/>
+                                <include reference="EhZ-9g-6hN"/>
+                                <include reference="d74-Q0-veL"/>
+                                <include reference="lsH-C0-7dr"/>
+                                <include reference="SBv-ft-I2Z"/>
                                 <include reference="BWK-5c-F2T"/>
                                 <include reference="c7a-TO-YhQ"/>
                                 <include reference="d8R-h3-ed0"/>
@@ -331,22 +343,10 @@
                                 <include reference="Wan-rS-8IN"/>
                                 <include reference="kKS-Qd-UFe"/>
                                 <exclude reference="r3k-tf-FYd"/>
-                                <include reference="8up-lC-dNu"/>
-                                <include reference="luA-A6-nRA"/>
-                                <include reference="rE9-vx-Roc"/>
-                                <include reference="ydK-yM-8FR"/>
-                                <include reference="Mex-k5-Ijd"/>
-                                <include reference="uWn-Kn-sj3"/>
-                                <include reference="SBv-ft-I2Z"/>
-                                <include reference="EhZ-9g-6hN"/>
-                                <include reference="d74-Q0-veL"/>
-                                <include reference="lsH-C0-7dr"/>
-                                <include reference="7xj-ST-lkA"/>
-                                <include reference="NUe-pL-RMH"/>
                             </mask>
                         </variation>
                     </view>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="D40-3j-OxA"/>
                     <connections>
                         <outlet property="billField" destination="W2B-L9-hme" id="e1S-vf-a07"/>
                         <outlet property="percentControl" destination="EM5-b0-McM" id="wD1-m5-vrz"/>
@@ -356,11 +356,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="840" y="-196.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ch5-M4-M5Y">
             <objects>
-                <viewController title="Settings" id="WbK-TL-N6s" sceneMemberID="viewController">
+                <viewController title="Settings" id="WbK-TL-N6s" customClass="SettingsViewController" customModule="tippical" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dQP-DA-BPM"/>
                         <viewControllerLayoutGuide type="bottom" id="KAa-Hp-b3y"/>
@@ -371,40 +372,61 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lf-Lv-ech">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQ1-m9-8G4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneTap:" destination="WbK-TL-N6s" eventType="touchUpInside" id="ikP-lK-zVX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xQ1-m9-8G4" firstAttribute="top" secondItem="dQP-DA-BPM" secondAttribute="bottom" id="Tq3-NW-zUX"/>
                             <constraint firstAttribute="centerX" secondItem="5lf-Lv-ech" secondAttribute="centerX" constant="5" id="VTq-M9-EHG"/>
-                            <constraint firstAttribute="centerY" secondItem="5lf-Lv-ech" secondAttribute="centerY" constant="133.5" id="k5O-1j-fi3"/>
+                            <constraint firstAttribute="centerY" secondItem="5lf-Lv-ech" secondAttribute="centerY" constant="133.5" id="k5O-1j-fi3">
+                                <variation key="heightClass=regular-widthClass=compact" constant="134"/>
+                            </constraint>
+                            <constraint firstItem="5lf-Lv-ech" firstAttribute="top" secondItem="dQP-DA-BPM" secondAttribute="bottom" constant="15" id="tSi-en-zU9"/>
+                            <constraint firstItem="xQ1-m9-8G4" firstAttribute="trailing" secondItem="mFq-35-PaQ" secondAttribute="trailingMargin" id="tpP-pr-dAR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="5lf-Lv-ech"/>
+                                <exclude reference="xQ1-m9-8G4"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="VTq-M9-EHG"/>
                                 <exclude reference="k5O-1j-fi3"/>
+                                <exclude reference="tSi-en-zU9"/>
+                                <exclude reference="Tq3-NW-zUX"/>
+                                <exclude reference="tpP-pr-dAR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="5lf-Lv-ech"/>
+                                <include reference="xQ1-m9-8G4"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="VTq-M9-EHG"/>
-                                <include reference="k5O-1j-fi3"/>
+                                <exclude reference="k5O-1j-fi3"/>
+                                <include reference="tSi-en-zU9"/>
+                                <include reference="Tq3-NW-zUX"/>
+                                <include reference="tpP-pr-dAR"/>
                             </mask>
                         </variation>
                     </view>
-                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdd-NL-Evi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="190.5"/>
+            <point key="canvasLocation" x="1632" y="-196.5"/>
         </scene>
     </scenes>
     <resources>
