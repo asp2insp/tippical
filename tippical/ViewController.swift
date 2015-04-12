@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     func recalculateTip() {
         var billText = billField.text
         var billAmount = billText._bridgeToObjectiveC().doubleValue
-        var tipAmount = billAmount * TIP[percentControl.selectedSegmentIndex]
+        var tipAmount = round(billAmount * TIP[percentControl.selectedSegmentIndex] * 100) / 100
         var total = billAmount + tipAmount
         tipField.text = "$\(tipAmount)"
         totalField.text = "$\(total)"
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         var result = true
+        let prospectiveText = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
         if textField == billField {
             if countElements(string) > 0 {
@@ -55,6 +56,15 @@ class ViewController: UIViewController {
                 let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
                 result = replacementStringIsLegal
             }
+            // Don't allow more than 2 decimal places
+            if let decimalPos = find(prospectiveText, ".") {
+                if distance(decimalPos, prospectiveText.endIndex) >= 4 {
+                    result = false
+                }
+            }
+            // Don't allow multiple decimal points
+            let scanner = NSScanner(string: prospectiveText)
+            result &= scanner.scanDecimal(nil) && scanner.atEnd
         }
         
         return result
