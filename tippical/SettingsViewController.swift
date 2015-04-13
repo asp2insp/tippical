@@ -9,6 +9,7 @@
 import UIKit
 
 let kSegmentSettingsKey = "SEGMENT_SETTINGS_ARRAY"
+let kDefaultTipAmount = "DEFAULT_TIP_AMOUNT"
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -21,6 +22,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     var TIP: [Double] = []
+    var SELECTED = 0
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.TIP.count
@@ -62,7 +64,20 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         refreshChoices()
+        defaultTipControl.selectedSegmentIndex = defaults.integerForKey(kDefaultTipAmount)
+
         self.tipChoicesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    func save() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(SELECTED, forKey: kDefaultTipAmount)
+        defaults.setObject(TIP, forKey: kSegmentSettingsKey)
+    }
+    
+    @IBAction func defaultChanged(sender: AnyObject) {
+        SELECTED = defaultTipControl.selectedSegmentIndex
+        save()
     }
     
     @IBAction func sliderChanged(sender: AnyObject) {
@@ -70,5 +85,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             TIP[selectedIndex] = Double(valueSlider.value);
         }
         refreshChoices()
+        save()
     }
 }

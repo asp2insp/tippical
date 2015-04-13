@@ -21,16 +21,6 @@ class ViewController: UIViewController {
         billField.textAlignment = .Center
         tipField.textAlignment = .Center
         totalField.textAlignment = .Center
-        
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        if let savedTips = defaults.arrayForKey(kSegmentSettingsKey) {
-            TIP = savedTips as [Double]
-        } else {
-            TIP = [0.15, 0.18, 0.2, 0.25]
-            defaults.setObject(TIP, forKey: kSegmentSettingsKey)
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,12 +29,22 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let savedTips = defaults.arrayForKey(kSegmentSettingsKey) {
+            TIP = savedTips as [Double]
+        } else {
+            TIP = [0.15, 0.18, 0.2, 0.25]
+            defaults.setObject(TIP, forKey: kSegmentSettingsKey)
+        }
+
         billField.becomeFirstResponder()
         percentControl.removeAllSegments()
         for t in TIP {
             let fmt = Int(t*100)
             percentControl.insertSegmentWithTitle("\(fmt)%", atIndex: TIP.count, animated:true)
         }
+        percentControl.selectedSegmentIndex = defaults.integerForKey(kDefaultTipAmount)
     }
 
     func recalculateTip() {
