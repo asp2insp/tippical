@@ -45,6 +45,7 @@ class ViewController: UIViewController {
             percentControl.insertSegmentWithTitle("\(fmt)%", atIndex: TIP.count, animated:true)
         }
         percentControl.selectedSegmentIndex = defaults.integerForKey(kDefaultTipAmount)
+        recalculateTip()
     }
 
     func recalculateTip() {
